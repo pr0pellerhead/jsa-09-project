@@ -1,0 +1,32 @@
+{
+  "name": "jsa-09-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pr0pellerhead/jsa-09-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pr0pellerhead/jsa-09-project/issues"
+  },
+  "homepage": "https://github.com/pr0pellerhead/jsa-09-project#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "express-http-proxy": "^1.6.2",
+    "express-jwt": "^6.0.0",
+    "form-data": "^4.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mailgun.js": "^3.2.0",
+    "mongoose": "^5.11.16",
+    "node-input-validator": "^4.3.3"
+  }
+}
