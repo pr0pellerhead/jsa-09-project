@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node services/auth/index.js & node services/storage/index.js & node services/users/index.js & node services/proxy/index.js"
   },
   "repository": {
     "type": "git",
@@ -26,7 +27,7 @@
     "form-data": "^4.0.0",
     "jsonwebtoken": "^8.5.1",
     "mailgun.js": "^3.2.0",
-    "mongoose": "^5.11.16",
-    "node-input-validator": "^4.3.3"
+    "node-input-validator": "^4.3.3",
+    "mongoose": "^5.11.15"
   }
 }

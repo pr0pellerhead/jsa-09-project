@@ -1,5 +1,5 @@
-const userData = require('../pkg/users');
-const { user, createAccountSchema, loginSchema } = require('../pkg/users/validator');
+const userData = require('../../../pkg/users');
+const { user, createAccountSchema, loginSchema } = require('../../../pkg/users/validator');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const cfg = require('../../../pkg/config');
@@ -58,7 +58,7 @@ const login = async (req, res) => {
             // exp: (new Date().getTime() + (60 * 1000)) / 1000
         };
 
-        let token = jwt.sign(payload, cfg.get('server').jwt_key);
+        let token = jwt.sign(payload, cfg.get('security').jwt_key);
 
         res.status(200).send({jwt: token});
 
@@ -76,7 +76,7 @@ const refreshToken = (req, res) => {
         exp: (new Date().getTime() + (365 * 24 * 60 * 60 * 1000)) / 1000
     };
 
-    let token = jwt.sign(payload, cfg.get('server').jwt_key);
+    let token = jwt.sign(payload, cfg.get('security').jwt_key);
     res.status(200).send({ jwt: token });
 };
 
